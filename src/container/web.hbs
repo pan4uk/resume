@@ -1,0 +1,55 @@
+<main>
+    <h1>IT Languages</h1>
+    <hr>
+    <hr>
+    {{#with web}}
+
+    {{#each languages}}
+    <ul></ul>
+    <li><abbr title="{{description}}">{{name}}</abbr>
+        ,Version:<dfn>//{{version}}//</dfn>
+        <ul>
+            {{#each elements}}
+            <li><abbr title="{{description}}">{{name}}</abbr></li>
+            {{/each}}
+            {{#each properties}}
+            <li><abbr title="{{description}}">{{name}}</abbr>
+                <ul>
+                    {{#each properties}}
+                    <li><abbr title="{{description}}">{{value}}</abbr>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+            {{#each functions}}
+            <li><abbr title="{{description}}">{{name}}</abbr>
+                <ul>{{#each parameters}}
+                    <li><abbr title="{{description}}">{{name}}</abbr>
+                        type:<code>{{type}}</code></li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+    </li>
+    </ul>
+
+    {{/each}}
+
+    {{/with}}
+</main>
+
+
+
+
+
+{{!-- {{#with}}
+
+{{/with}}
+
+{{#each}}
+
+{{/each}}
+
+{{#if}}{{/if}} --}}
