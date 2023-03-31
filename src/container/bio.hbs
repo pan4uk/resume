@@ -1,0 +1,118 @@
+<main>
+    <section>
+        <div>
+            <h1> {{name}} </h1>
+        </div>
+        <div>
+            <b>Nationality: {{nationality}} </b>
+        </div>
+        <div>
+            <b><em>({{occupation}})</em></b>
+        </div>
+        <hr>
+        <div>
+            <data>Birthdate: {{birthdate}}</data>
+        </div>
+        <div>
+            <address><em> {{birthplace}} </em></address>
+        </div>
+        <div>
+            <data>Deathdate: {{deathdate}} </data>
+        </div>
+        <div>
+            <address><em> {{deathplace}} </em></address>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h3>Education:</h3>
+            {{#each education}}
+            Degree:{{degree}}, field {{field}},
+            institution {{institution}}({{year}}).
+            {{/each}}
+        </div>
+        <br>
+        <div>
+            <strong>World recognition for: {{known_for}} </strong>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h3>Notable publications</h3>
+            {{#each notable_publications}}
+            <ul>
+                <li> "{{title}}" ({{year}}-{{publisher}}).</li>
+            </ul>
+            {{/each}}
+        </div>
+        <div>
+            <h3>Family relationships</h3>
+            {{#each partners}}
+            <ul>
+                <li><b>{{name}}</b>,<em>{{relationship}}
+                        ({{years}})</em>.
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h3>Awards:</h3>
+            {{#each awards}}
+            {{title}},({{year}})/{{description}}/.
+            {{/each}}
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h4>Was inspired: {{influences}} </h4>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h4>Inspired such people:
+                        {{influenced}} </h4>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <h4>The most famous quotes:
+                        <q>{{quotes}}</q>
+                    </h4>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    {{#each major_discoveries}}
+                    <h4>Major discoveries:</h4>
+                    <div>{{title}}({{year}})</div>
+                    <div>/{{description}}/</div>
+                    {{/each}}
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div>
+            <ul>
+                <li>{{#with contributions}}
+                    <h4>contributions to world history:</h4>
+                    <div><b>{{title}}<em>({{year}}).</em></b></div>
+                    <div>{{description}}({{field}})</div>
+                    {{/with}}
+                </li>
+            </ul>
+        </div>
+        <div>
+
+    </section>
+</main>
