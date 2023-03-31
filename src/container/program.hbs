@@ -1,0 +1,72 @@
+<main>
+    {{#with program}}
+    <h1>{{excursion.name}} on France</h1>
+    <hr>
+    <div> <em>{{excursion.date}}</em>
+        <div>{{#with excursion}}
+            <em>{{location.city}}//{{location.country}}</em>
+        </div>
+        <div>..................................</div>
+        <h2>{{name}}</h2>
+
+    </div>
+    </div>
+    <hr>
+    <div>
+        <h3>Your tours:</h3>
+        <hr>
+    </div>
+    <div>
+        {{#each program}}
+        <div>
+            <b>{{name}}</b> - ({{type}}), duration:{{duration}} hours
+        </div>
+
+        {{#with details}}
+        <div>{{#if museum.name}}
+            <li>{{museum.name}}</li>
+            {{else}}
+            {{null}}
+            {{/if}}
+            {{#with museum.location}}
+            <address>{{address}},{{city}},{{country}}</address>
+            {{/with}}
+            {{#each museum.exhibits}}
+            <ul>
+                <li>{{name}}{{#if artist}}<em>({{artist}})</em>{{else}}
+                    {{null}}{{/if}}</li>,<q> {{description}} </q>,
+                ({{#if audio_guide}}Audio guide{{/if}})
+            </ul>
+            {{/each}}
+            {{#if venue.name}}
+            <li>{{venue.name}}</li>
+            {{else}}
+            {{null}}
+            {{/if}}
+            {{#with venue.location}}
+            <address>{{address}},{{city}},{{country}}</address>
+            {{/with}}
+            {{#each performers}}
+            <ul>
+                <li>{{name}}<em>({{type}})</em>
+                </li>
+            </ul>
+            {{/each}}
+        </div>
+        <div><b>
+                Your guide for today:
+            </b></div>
+        <div> {{guide.name}},({{guide.rating}}) Guide language:/{{guide.language}}/</div>
+        <hr>
+        {{/with}}
+
+        {{/each}}
+    </div>
+    {{/with}}
+
+
+
+
+
+    {{/with}}
+</main>
