@@ -1,0 +1,54 @@
+<main>
+    <section>
+        <div>
+            <h1>{{name}} <span class="badge bg-secondary"> {{history.year}} </span></h1>
+            <h2> Founder: {{history.founder}} </h2>
+            <h3><dfn> {{description}} </dfn></h3>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <div>
+            <h3><strong>JavaScript has 8 types:</strong></h3>
+            {{> list data=types}}
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h3><strong>JavaScript Syntax:</strong></h3>
+        {{#with syntax}}
+        <h4><dfn>Variables:</dfn></h4>
+        {{> syntax data=variables }}
+        <h4><dfn>Functions:</dfn></h4>
+        {{> syntax data=functions }}
+        <h4><dfn>Conditionals:</dfn></h4>
+        {{> syntax data=conditionals }}
+        <h4><dfn>Loops:</dfn></h4>
+        {{> syntax data=loops}}
+        <h4><dfn>Classes:</dfn></h4>
+        {{> syntax data=classes }}
+        {{/with}}
+    </section>
+    <hr>
+    <section>
+        <h3><strong>Features of Javascript:</strong></h3>
+        {{> list data=features}}
+    </section>
+    <hr>
+    <section>
+        <h3><strong>Libraries of Javascript:</strong></h3>
+        {{> list data=libraries}}
+    </section>
+    <hr>
+    <section>
+        <h3><strong>Tools of Javascript:</strong></h3>
+        {{> list data=libraries}}
+    </section>
+    <section>
+        {{#each community}}
+
+        {{name}}<button type="button" class="btn btn-link"> {{type}} </button>
+
+        {{/each}}
+    </section>
+</main>
