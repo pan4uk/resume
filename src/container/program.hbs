@@ -13,13 +13,13 @@
     </div>
     <hr>
     <div>
-        <h3>Your tours:</h3>
+        <h2>Your tours:</h2>
         <hr>
     </div>
     <div>
         {{#each program}}
         <div>
-            <b>{{name}}</b> - ({{type}}), duration:{{duration}} hours
+            <h2><b>{{name}}</b></h2> - ({{type}}), duration:{{duration}} hours
         </div>
 
         {{#with details}}
@@ -59,6 +59,52 @@
         <div> {{guide.name}},({{guide.rating}}) Guide language:/{{guide.language}}/</div>
         <hr>
         {{/with}}
+
+
+        {{!-- {{#with details.museum}}
+        <h3>{{name}}</h3>
+        <hr>
+        {{#with location}}
+        <p><i>Location</i></p> {{address}}, {{city}}
+        {{/with}}
+        <i>
+            <p>Exhibits</p>
+        </i>
+        {{#each exhibits}}
+        <ul>
+            <li>
+                <p><strong> {{name}} </strong> {{#if audio_guide}}<sup>*audio guide</sup>{{/if}}</p>
+                <div><dfn> {{description}} </dfn></div>
+            </li>
+        </ul>
+        {{/each}}
+        {{/with}}
+
+
+        {{#with details.venue}}
+        <h3>{{name}}</h3>
+        <hr>
+        {{#with location}}
+        <p><i>Location</i> {{address}}, {{city}} </p>
+        {{/with}}
+        {{/with}}
+
+        {{#each details.performers}}
+        <i>
+            <p>Performers:</p>
+        </i>
+
+        <ul>
+            <li> {{name}} ({{type}}) </li>
+        </ul>
+        {{/each}}
+
+        {{#with details.guide}}
+        <p><i>Guide - </i></p><b> {{name}} </b> (language {{language}})
+        {{/with}} --}}
+
+
+
 
         {{/each}}
     </div>
