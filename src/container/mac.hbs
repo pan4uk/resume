@@ -1,0 +1,80 @@
+<main>
+    <section>
+        <em> {{category}} </em>
+        <h1><strong> {{name}} </strong></h1>
+        <h2><i> {{description}} </i></h2>
+    </section>
+
+
+    {{#with features}}
+    <section>
+        <div class="card" style="width: 40rem;">
+            <div class="card-header">
+                {{#with processor}}
+                <h4>Processsor: {{brand}}, {{model}}, {{speed}}, {{cores}}, {{cache}}.</h4>
+                {{/with}}
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{#with memory}}
+                    <h4>Memory: {{type}}, {{size}}, {{speed}}.</h4>
+                    {{/with}}
+                </li>
+                <li class="list-group-item">{{#with storage}}
+                    <h4>Storage: {{type}}, {{size}}.</h4>
+                    {{/with}}
+                </li>
+                <li class="list-group-item">{{#with display}}
+                    <h4>Display: {{size}}, {{resolution}}, {{technology}},
+                        {{color_space}}, {{brightness}}, {{refresh_rate}}.
+                    </h4>
+                    {{/with}}
+                </li>
+                <li class="list-group-item">{{#with graphics}}
+                    <h4>Graphics: {{brand}}, {{model}}, {{memory}}.</h4>
+                    {{/with}}
+                </li>
+                <li class="list-group-item">{{#each ports}}
+                    <h4> Ports: {{type}}, {{count}}, {{features}}.</h4>
+                    {{/each}}
+                </li>
+                <li class="list-group-item">{{#with battery}}
+                    <h4>Battery: {{type}}, {{capacity}}, {{life}}.</h4>
+                    {{/with}}
+                </li>
+                <li class="list-group-item">
+                    <h4>Weight: {{weight}}.</h4>
+                </li>
+                <li class="list-group-item">{{#with dimensions}}
+                    <h4>Dimensions: {{height}}, {{width}}, {{depth}}.</h4>
+                    {{/with}}
+                <li class="list-group-item">
+                    <h4>Operating_system: {{operating_system}}.</h4>
+                </li>
+                <li class="list-group-item">{{#each accessories}}
+                    <h4> Accessories: {{name}} - {{price}}.</h4>
+                    {{/each}}
+                </li>
+
+            </ul>
+        </div>
+    </section>
+    {{/with}}
+
+    <section>
+        <div>
+            <h3>Price: {{price}} </h3>
+            <button type="button" class="btn btn-primary"
+                style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;">
+                <h3><b>Buy</b></h3>
+            </button>
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+</main>
