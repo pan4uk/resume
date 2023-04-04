@@ -1,0 +1,7 @@
+{{#each data}}
+<ul class="list-group">
+    <li class="list-group-item">Groups: {{name}}, {{description}}({{id}}){{> users data=members}} </li>
+
+    {{> users data=mutual_friends}}
+</ul>
+{{/each}}
