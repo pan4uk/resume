@@ -1,0 +1,138 @@
+<main>
+    <div class="card">
+        <div class="card-body">
+            {{#with heading.main}}
+            <span>
+                <h1> {{title}} </h1>
+            </span>
+            <div>
+                <p>{{text}}</p>
+            </div>
+            <br>
+            <div>
+                <p><button type="button" class="btn btn-primary">{{#with button_text}}
+                        {{solid}}
+                        {{/with}}</button></p>
+            </div>
+            <div>
+                <p><button type="button" class="btn btn-outline-primary">{{#with button_text}}
+                        {{outline}}
+                        {{/with}}</button></p>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with heading.second}}
+            <span>
+                <h2> {{title}} </h2>
+            </span>
+            <div>
+                <p>{{text}} </p>
+            </div>
+            <br>
+            <div>
+                <p><button type="button" class="btn btn-secondary">{{#with button_text}}
+                        {{solid}}
+                        {{/with}}</button></p>
+            </div>
+            <div>
+                <p><button type="button" class="btn btn-outline-secondary">{{#with button_text}}
+                        {{outline}}
+                        {{/with}}</button></p>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with heading.subblock}}
+            <span>
+                <h2> {{title}} </h2>
+            </span>
+            <div>
+                <p>{{text}} </p>
+            </div>
+            <br>
+            <div>
+                <p><button type="button" class="btn btn-dark">{{#with button_text}}
+                        {{solid}}
+                        {{/with}}</button></p>
+            </div>
+            <div>
+                <p><button type="button" class="btn btn-outline-dark">{{#with button_text}}
+                        {{outline}}
+                        {{/with}}</button></p>
+            </div>
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with nested_display}}
+            <div class="display-1">
+                {{title}}
+            </div>
+            <br>
+            <div class="card">
+                <div class="card-body">
+                    {{#with children_display}}
+                    <p class="display-4">
+                        {{title}}
+                    </p>
+                    <p> {{text}} </p>
+                    <br>
+                    {{#with button}}
+                    <div><button type="button" class="btn btn-outline-warning"> {{text}} </button></div>
+                    {{/with}}
+                    {{/with}}
+                </div>
+            </div>
+            <br>
+            <br>
+            <h6> {{header_text}} </h6>
+            {{#with button}}
+            <div><button type="button" class="btn btn-info"> {{text}} </button></div>
+            {{/with}}
+
+            {{/with}}
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-body">
+            {{#with paragraph}}
+            <span>
+                <p class="text-uppercase"> {{title}} </p>
+            </span>
+            <div>
+                <p class="text-lowercase">{{text}} </p>
+            </div>
+            <div>
+                {{#with button}}
+                <p>
+                    <a href="{{url}}"><button type="button" class="btn btn-link">
+                            {{text}}
+                        </button></a>
+                </p>
+                {{/with}}
+            </div>
+            <hr>
+            <div>
+                {{#each list_name}}
+                <a href="{{url}}"><button type="button" class="btn btn-link">
+                        {{text}}
+                    </button></a>
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+    </div>
+
+
+</main>
