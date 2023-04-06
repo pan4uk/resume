@@ -7,13 +7,15 @@ body {
   background: #fff;
 }
 
-main,
-header,
-footer,
-nav {
+main
+ {
   margin: 32px;
 }
 
 section {
   padding: 16px;
 }
+
+/* header,
+footer,
+nav */
