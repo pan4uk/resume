@@ -1,16 +1,10 @@
 <main class="m-3">
-    <div class="row col-12">
-        <div class="mt-5 ">
-            {{#with navigation}}
-            <div class="nav">
-                <h1 class="col-9"> {{Logo}} </h1>
-                {{#each links}}
-                <a href="{{href}}" class="btn btn-link px-2"> {{text}} </a>
-                {{/each}}
-                <a href="#" class="btn btn-link disabled">Disabled</a>
-            </div>
-            {{/with}}
-        </div>
+
+    <header>
+        {{> shopheader}}
+    </header>
+
+    <body>
         <div>
             <div class="mt-5">
                 {{#with newsBlock}}
@@ -60,20 +54,7 @@
             </div>
             <div class="row">
                 {{#each cards}}
-                <div class="col-4">
-                    <div class="card">
-                        <img src="{{image}}" class="card-img-top">
-                        <div>
-                            <h5 class="card-title ms-4">{{title}}{{#if isHot}}<button type="button"
-                                    class="btn btn-success btn-sm rounded-pill">New</button>{{/if}}
-                                {{#if isNew}}<button type="button"
-                                    class="btn btn-success btn-sm rounded-pill">New</button>{{/if}}</h5>
-                        </div>
-                        <div class="card-body">
-                            <h4>{{description}}</h4>
-                        </div>
-                    </div>
-                </div>
+                {{> shopcard}}
                 {{/each}}
             </div>
             {{/with}}
@@ -100,33 +81,13 @@
                 </div>
             </div>
         </div>
-        <hr class="m-5">
-        <div class="card text-center text-bg-success">
-            {{#with service}}
-            <h2> {{title}} </h2>
-            <p> {{description}} </p>
-            {{#each buttons}}
-            <div class="card-body text-center">
-                <a href="{{link}}" type="button" class="btn btn-primary col-2 ">{{text}} </a>
-                {{/each}}
-                {{/with}}
-            </div>
-
-
+        <div>
+            {{> shopaction}}
         </div>
-        <hr class="m-5">
-        <div class="row">
-            {{#each footer}}
-            <div class="nav col-2">
-                <div>
-                    {{#each this}}
-                    <div>
-                        <a href={{this.link}} class="nav-link {{#if @last}} disabled {{/if}} "> {{this.text}} </a>
-                    </div>
-                    {{/each}}
-                </div>
-            </div>
-            {{/each}}
-        </div>
-    </div>
+    </body>
+
+    <footer>
+        {{> shopfooter}}
+    </footer>
+
 </main>
