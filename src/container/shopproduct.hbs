@@ -1,0 +1,140 @@
+<main class="m-3">
+
+    <header>
+        {{> shopheader}}
+    </header>
+
+    <body>
+        <div class="mt-5">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    {{#each breadcrumb}}
+                    {{#if url}}
+                    <li class="breadcrumb-item"><a href="{{url}}">{{name}}</a></li>
+                    {{else}}
+                    <li class="breadcrumb-item active" aria-current="page">{{name}}</li>
+                    {{/if}}
+                    {{/each}}
+                </ol>
+            </nav>
+        </div>
+        <div>
+            {{#with productData}}
+            <div class="row">
+                <div class="col-6">
+                    <div class="card mb-3">
+
+                        <img src="{{img}}">
+
+                    </div>
+                    <div class="card">
+                        {{#with info}}
+                        <div class="card-body">
+                            <h5 class="card-title">{{title}}</h5>
+                            <p class="card-text">{{about}}</p>
+                            <div class="display-6"><b>{{price}}</b></div>
+                            <div class="nav">
+                                {{#each category}}
+                                {{#if isHot}}
+                                <a href="#" class="btn btn-warning btn-sm rounded-pill">{{name}}</a>
+                                {{/if}}
+
+                                {{#if isNew}}
+                                <a href="#" class="btn btn-primary btn-sm rounded-pill">{{name}}</a>
+                                {{/if}}
+
+                                {{#if isBonus}}
+                                <a href="#" class="btn btn-info btn-sm rounded-pill">{{name}}</a>
+                                {{/if}}
+
+                                {{/each}}
+                            </div>
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div>
+                        {{#with item}}
+                        <table class="table">
+                            {{#with head}}
+                            <thead>
+                                <tr>
+                                    <th>{{this.[0]}}</th>
+                                    <th>{{this.[1]}}</th>
+                                    <th>{{this.[2]}}</th>
+                                </tr>
+                            </thead>
+                            {{/with}}
+                            <tbody>
+                                {{#each body}}
+                                <tr>
+                                    <th>{{this.[0]}}</th>
+                                    <td>{{this.[1]}}</td>
+                                    <td>{{this.[2]}}</td>
+                                    <td></td>
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                        {{/with}}
+                    </div>
+                    <div class="card mb-3">
+                        {{#with param}}
+                        <div class="card-header">
+                            {{title}}
+                        </div>
+                        {{#each list}}
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">{{this}}</li>
+                        </ul>
+                        {{/each}}
+                        {{/with}}
+                    </div>
+                    {{#with alert}}
+                    <div class="alert alert-danger">{{#if isError}} {{text}} {{/if}}</div>
+                    {{/with}}
+                </div>
+            </div>
+            <div class="mt-4">
+                {{#each actionList}}
+                {{#if isWarning}}
+                <button type="button" class="btn btn-warning">{{name}}</button>
+                {{/if}}
+                {{#if isError}}
+                <button type="button" class="btn btn-outline-danger">{{name}}</button>
+                {{/if}}
+                {{#if isSuccess}}
+                <button type="button" class="btn btn-success">{{name}}</button>
+                {{/if}}
+                {{#if isGood}}
+                <button type="button" class="btn btn-outline-success">{{name}}</button>
+                {{/if}}
+                {{/each}}
+            </div>
+            {{/with}}
+        </div>
+        <div>
+            {{#with goodsOtherBlock}}
+            <div class="mt-5">
+                <div class="text-center">
+                    <h2>{{title}}</h2>
+                </div>
+                <div class="row">
+                    {{#each cards}}
+                    {{> shopcard}}
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+        </div>
+        <div>
+            {{>shopaction}}
+        </div>
+    </body>
+
+    <footer>
+        {{> shopfooter}}
+    </footer>
+
+</main>
