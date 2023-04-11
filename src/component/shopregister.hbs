@@ -1,0 +1,21 @@
+<div class="card text-bg-dark">
+    <div class="row">
+        <div class="mt-5 ">
+            {{#with subscribe}}
+            <div class="nav">
+                <div class="col-8">
+                    <h2 class="mb-5 ms-4"> {{header}} </h2>
+                    <p class="mb-5 ms-4"> {{description}} </p>
+                </div>
+                <div class="col-4">
+                    {{#each buttons}}
+                    <button href="{{link}}" class="btn btn-primary btn-lg ms-5"> {{text}}
+                    </button>
+                    {{/each}}
+                </div>
+
+            </div>
+            {{/with}}
+        </div>
+    </div>
+</div>
