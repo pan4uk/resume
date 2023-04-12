@@ -1,0 +1,128 @@
+<main class="m-3">
+    <header>
+        <div>
+            {{> shopheader}}
+        </div>
+    </header>
+
+    <body>
+        <div>
+            {{> shopbreadcrumb}}
+        </div>
+        <div>
+            <h1> {{header}} </h1>
+        </div>
+        <div>
+            <div class="row mb-5">
+                {{#each sortBlock}}
+                <div class="col-3">
+                    <label class="form-label"></label>
+                    <select class="form-select">
+                        <option>{{placeholder}}</option>
+                        {{#each options}}
+                        <option value="{{value}}">{{text}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+
+        <div>
+            <div class="row mb-5">
+                <div class="col-4">
+                    <div class="card p-2">
+                        <div>
+                            {{#with filterBlock}}
+                            <div>
+                                {{#with sellers}}
+                                <p> {{title}} </p>
+                                {{#each list}}
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label">
+                                        {{value}}
+                                    </label>
+                                </div>
+                                {{/each}}
+                                {{/with}}
+                            </div>
+                            <hr>
+                            <div>
+                                {{#with brands}}
+                                <p> {{title}} </p>
+                                <div>
+                                    <div>
+                                        <input type="text" class="form-control mb-3"
+                                            placeholder="{{input.placeholder}}">
+                                    </div>
+                                    <div>
+                                        {{#each options}}
+                                        <div class=" form-check">
+                                            <input class="form-check-input" type="checkbox">
+                                            <label class="form-check-label">
+                                                {{value}}
+                                            </label>
+                                        </div>
+                                        {{/each}}
+                                    </div>
+                                    {{/with}}
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                {{#with price}}
+                                <p> {{title}} </p>
+                                {{#with range}}
+                                <div>
+                                    <input type="text" class="form-control mb-3" placeholder="{{from}}">
+                                    <input type="text" class="form-control mb-3" placeholder="{{to}}">
+                                </div>
+                                {{/with}}
+                                <div>
+                                    <a href="{{button.link}}" class="btn btn-outline-secondary"> {{button.text}} </a>
+                                </div>
+                                {{/with}}
+                            </div>
+                            <hr>
+                            <div>
+                                {{#each filterList}}
+                                <p>{{title}}</p>
+                                <div class=" form-check">
+                                    {{#each options}}
+                                    <div>
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label">
+                                            {{value}}
+                                        </label>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                                {{/each}}
+                            </div>
+                            {{/with}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="row">
+                        {{#each goodsList}}
+                        {{> catalogItem}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                {{> shopaction}}
+            </div>
+        </div>
+
+    </body>
+
+    <footer>
+        <div>
+            {{> shopfooter}}
+        </div>
+    </footer>
+</main>
