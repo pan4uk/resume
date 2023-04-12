@@ -23,18 +23,7 @@
 
             <div class="nav nav-tabs">
                 {{#each tabs}}
-                <div class="nav-item">
-                    {{#if isActive}}
-                    <a href="#" class="nav-link active">{{text}}</a>
-                    {{else}}
-                    {{#unless isDisabled}}
-                    <a href="#" class="nav-link">{{text}}</a>
-                    {{/unless}}
-                    {{/if}}
-                    {{#if isDisabled}}
-                    <a href="#" class="nav-link disabled">{{text}}</a>
-                    {{/if}}
-                </div>
+                {{> shoptabnav}}
                 {{/each}}
             </div>
             <div class="row">

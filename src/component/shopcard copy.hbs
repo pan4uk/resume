@@ -1,0 +1,14 @@
+<div class="col-4">
+    <div class="card">
+        <img src="{{image}}" class="card-img-top">
+        <div>
+            <h5 class="card-title ms-4">{{title}}{{#if isHot}}<button type="button"
+                    class="btn btn-success btn-sm rounded-pill">New</button>{{/if}}
+                {{#if isNew}}<button type="button" class="btn btn-success btn-sm rounded-pill">New</button>{{/if}}
+            </h5>
+        </div>
+        <div class="card-body">
+            <h4>{{description}}</h4>
+        </div>
+    </div>
+</div>
