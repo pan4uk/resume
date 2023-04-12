@@ -1,0 +1,114 @@
+<main class="m-3">
+    <header>
+        <div>
+            {{> shopheader}}
+        </div>
+    </header>
+
+    <body>
+        <div>
+            <div class="row">
+                {{#with formBlock}}
+                <div class="col-8 mt-5">
+                    <div>
+                        <h1> {{header}} </h1>
+                        <p> {{rating.title}}:{{rating.value}} </p>
+                    </div>
+
+                    <div>
+                        {{#with actionBlock}}
+                        <div>
+                            <div class="nav nav-tabs">
+                                {{#each tabs}}
+                                {{> shoptabnav}}
+                                {{/each}}
+                            </div>
+                        </div>
+
+                        <hr class="my-5">
+
+                        <div>
+                            {{#with report}}
+                            <div class="card p-2">
+                                <p> {{title}} </p>
+                                <div>
+                                    <a href="{{button.link}}" class="btn btn-secondary">{{button.text}}</a>
+                                </div>
+                            </div>
+                            {{/with}}
+                        </div>
+                        {{/with}}
+                    </div>
+
+                    <hr class="my-5">
+
+                    <div>
+                        {{#with feedbackBlock}}
+                        <h3> {{title}} </h3>
+                        <div>
+                            {{#each buttons}}
+                            {{#if isWarning}}
+                            <a href="{{link}}" class="btn btn-warning"> {{text}} </a>
+                            {{/if}}
+                            {{#if isSuccess}}
+                            <a href="{{link}}" class="btn btn-success"> {{text}} </a>
+                            {{/if}}
+                            {{#if isDanger}}
+                            <a href="{{link}}" class="btn btn-danger"> {{text}} </a>
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                        {{/with}}
+                    </div>
+                </div>
+                <div class=" col-4 mt-5">
+                    {{#with goodsInfo}}
+                    <div class="card p-2 mb-3">
+                        <div>
+                            <img src="{{photo}}">
+                        </div>
+                        <p class="mt-2"> {{name}} </p>
+                    </div>
+                    <div class="card p-2 mb-3">
+                        <p> {{price}} </p>
+                        <div>
+                            {{#each buttons}}
+                            {{#if isPrimary}}
+                            <div>
+                                <a href="{{link}}" class="btn btn-primary"> {{text}} </a>
+                            </div>
+                            {{/if}}
+                            {{#if isSecondary}}
+                            <div class="my-3">
+                                <a href="{{link}}" class="btn btn-secondary"> {{text}} </a>
+                            </div>
+                            {{/if}}
+                            {{/each}}
+                        </div>
+                    </div>
+                    <div class="card p-2">
+                        <p> {{seller.title}}:<b>{{seller.value}}</b></p>
+                    </div>
+                    {{/with}}
+                </div>
+                {{/with}}
+            </div>
+            <hr class="my-5">
+            <div>
+                {{#each reviewList}}
+                <div>
+                    {{> reviewItem}}
+                </div>
+                {{/each}}
+            </div>
+            <div>
+                {{> shopaction}}
+            </div>
+    </body>
+
+    <footer>
+        <div>
+            {{> shopfooter}}
+        </div>
+    </footer>
+</main>
