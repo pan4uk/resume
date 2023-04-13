@@ -1,0 +1,40 @@
+<main>
+    {{#with navigation}}
+    <div class="row card mb-5 p-2">
+        <div class="nav">
+            <h1 class="col-8 mt-3">{{firstname}} {{secondname}}</h1>
+            <h2 class="col-4 text-end mt-3"> {{title}} </h2>
+        </div>
+    </div>
+    <div>
+        <p class="display-3"> {{list}} </p>
+    </div>
+    <span>
+        {{text}}
+    </span>
+    <div class="mt-5">
+        <div class="row">
+            {{#with firstPages}}
+            <div class="col-3">
+                {{> index8Links}}
+            </div>
+            {{/with}}
+            {{#with secondPages}}
+            <div class="col-3">
+                {{> index8Links}}
+            </div>
+            {{/with}}
+            {{#with thirdPages}}
+            <div class="col-3">
+                {{> index8Links}}
+            </div>
+            {{/with}}
+            {{#with foursPages}}
+            <div class="col-3">
+                {{> index8Links}}
+            </div>
+            {{/with}}
+        </div>
+    </div>
+    {{/with}}
+</main>
