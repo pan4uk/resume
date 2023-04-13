@@ -3766,6 +3766,171 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/index8', function (req, res) {
+  res.render('index8', {
+    page: {
+      title: 'Volodymyr Panchuk | Resume project',
+    },
+
+    layout: 'index',
+
+    navigation: {
+      title: 'Resume project',
+
+      firstname: 'Volodymyr',
+      secondname: 'Panchuk',
+
+      list: 'List of my pages',
+      text: `This is a list of my first HTML pages written while studying at the IT Brains school. 
+      They were written using the Handlebars 
+      templating technology using the Bootstrap library.`,
+
+      firstPages: {
+        title: 'First pages',
+
+        links: [
+          {
+            text: 'Summary',
+            href: '/summary',
+            isPrimary: true,
+          },
+          {
+            text: 'Skills',
+            href: '/skills',
+            isPrimary: true,
+          },
+          {
+            text: 'Education',
+            href: '/education',
+            isPrimary: true,
+          },
+          {
+            text: 'Work',
+            href: '/work',
+            isPrimary: true,
+          },
+        ],
+      },
+
+      secondPages: {
+        title: 'Second pages',
+
+        links: [
+          {
+            text: 'Bio',
+            href: '/bio',
+            isOutline: true,
+          },
+          {
+            text: 'Person',
+            href: '/person',
+            isOutline: true,
+          },
+          {
+            text: 'Web',
+            href: '/web',
+            isOutline: true,
+          },
+          {
+            text: 'Program',
+            href: '/program',
+            isOutline: true,
+          },
+          {
+            text: 'JS',
+            href: '/js',
+            isOutline: true,
+          },
+          {
+            text: 'Car',
+            href: '/car',
+            isOutline: true,
+          },
+          {
+            text: 'Mac',
+            href: '/mac',
+            isOutline: true,
+          },
+          {
+            text: 'Facebook',
+            href: '/facebook',
+            isOutline: true,
+          },
+        ],
+      },
+
+      thirdPages: {
+        title: 'Third pages',
+
+        links: [
+          {
+            text: 'Task21',
+            href: '/task21',
+            isSecondary: true,
+          },
+          {
+            text: 'Task22',
+            href: '/task22',
+            isSecondary: true,
+          },
+          {
+            text: 'Task31',
+            href: '/task31',
+            isSecondary: true,
+          },
+        ],
+      },
+
+      foursPages: {
+        title: 'Fours pages',
+
+        links: [
+          {
+            text: 'Shophome',
+            href: '/shophome',
+            isSuccess: true,
+          },
+          {
+            text: 'Shopproduct',
+            href: '/shopproduct',
+            isSuccess: true,
+          },
+          {
+            text: 'Shopnews',
+            href: '/shopnews',
+            isSuccess: true,
+          },
+          {
+            text: 'Shoporder',
+            href: '/shoporder',
+            isSuccess: true,
+          },
+          {
+            text: 'Shopcart',
+            href: '/shopcart',
+            isSuccess: true,
+          },
+          {
+            text: 'Shopprofile',
+            href: '/shopprofile',
+            isSuccess: true,
+          },
+          {
+            text: 'Shopreview',
+            href: '/shopreview',
+            isSuccess: true,
+          },
+          {
+            text: 'Shopcatalog',
+            href: '/shopcatalog',
+            isSuccess: true,
+          },
+        ],
+      },
+    },
+  })
+})
+
 // ================================================================
 
 module.exports = router
