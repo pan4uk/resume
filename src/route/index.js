@@ -3783,7 +3783,7 @@ router.get('/index8', function (req, res) {
       list: 'List of my pages',
       text: `This is a list of my first HTML pages written while studying at the IT Brains school. 
       They were written using the Handlebars 
-      templating technology using the Bootstrap library.`,
+      templating technology and using the Bootstrap library.`,
 
       firstPages: {
         title: 'First pages',
