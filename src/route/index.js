@@ -30,10 +30,6 @@ var footer = {
   },
 }
 
-router.get('/', function (req, res) {
-  res.render('index', {})
-})
-
 router.get('/summary', function (req, res) {
   res.render('summary', {
     page: {
@@ -3766,8 +3762,8 @@ router.get('/shopcatalog', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-router.get('/index8', function (req, res) {
-  res.render('index8', {
+router.get('/', function (req, res) {
+  res.render('index', {
     page: {
       title: 'Volodymyr Panchuk | Resume project',
     },
