@@ -1,3 +1,37 @@
+/* :root {
+  background: rgb(255, 255, 255);
+} */
+
+
 /* html {
   max-width: 780px;
+  background: blue;
+} */
+
+/* *{
+  color:red
+} */
+
+/* h1 {
+  color: green;
+} */
+
+/* h2 { 
+  color: aquamarine;
+} */
+
+/* h3 {
+  color: blue;
+} */
+
+/* p, .box {
+  background: greenyellow;
+} */
+
+/* div h1 {
+  color: brown;
+} */
+
+/* span > p {
+  color: rgb(114, 150, 250);
 } */
