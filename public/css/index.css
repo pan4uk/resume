@@ -35,3 +35,56 @@
 /* span > p {
   color: rgb(114, 150, 250);
 } */
+
+/* .card-dark {
+  background: #d1cbcb;
+} */
+
+/* .input-dark {
+  background: #918e8e;
+} */
+
+/* .input-dark[required] {
+  background: #dd0a0a;
+} */
+
+/* .input-dark[type="number"] {
+  background: green;
+} */
+
+/* .small-img[alt~="small"] {
+  height: 500px;
+} */
+
+/* a[rel~="external"] {
+  color: green;
+} */
+
+/* button[class|="btn"] {
+  background: rgb(231, 222, 222);
+} */
+
+/* a[class*="btn"] {
+  background: red;
+} */
+
+/* .btn::first-letter {
+  color: red;
+} */
+
+/* .big-text::first-line {
+  color: red;
+} */
+
+/* .input-dark::placeholder {
+  color: green;
+  background: rgb(214, 214, 223);
+} */
+
+/* .big-text::before,
+.big-text::after {
+  content: "$$$";
+  color: black;
+  background: red;
+  
+} */
