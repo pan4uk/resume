@@ -40,6 +40,78 @@
   background: #d1cbcb;
 } */
 
+/* #test:target {
+  color: red;
+} */
+
+/* .link:link {
+  color: red;
+} */
+
+/* .link:hover {
+  color: green;
+} */
+
+/* .card:hover {
+  background-color: rgb(22, 231, 75);
+} */
+
+/* .link:active {
+  color: purple;
+} */
+
+/* input {
+  background-color: bisque;
+} */
+
+/* input:focus {
+  background-color: rgb(236, 15, 218);
+} */
+
+/* button {
+  background-color: greenyellow;
+} */
+
+/* button:enabled {
+  background-color: green;
+} */
+
+/* button:disabled {
+  background-color: aqua;
+} */
+
+/* .inp:read-write {
+  background-color: blue;
+} */
+
+/* input:checked ~ span {
+  background: red;
+} */
+
+/* .valid:valid {
+  background: yellow;
+} */
+
+/* .valid:invalid {
+  background: rgb(22, 194, 180);
+} */
+
+/* .valid:optional {
+  background: green;
+} */
+
+/* .number:out-of-range {
+  background: red;
+} */
+
+/* .number:in-range {
+  background: green;
+} */
+
+/* input:placeholder-shown ~ span {
+  color:blueviolet;
+} */
+
 /* .input-dark {
   background: #918e8e;
 } */
